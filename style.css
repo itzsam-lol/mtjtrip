@@ -1,0 +1,204 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  /* Light gray background */
+}
+
+#ctr1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 10px;
+  padding: 30px;
+  background-color: #1e90ff;
+  /* Dark blue background */
+  color: #ffffff;
+  /* White text color */
+}
+
+#ctr2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px;
+  background-color: #ffffff;
+  /* White background */
+  color: #333;
+  /* Dark text color */
+  border-top-right-radius: 10px;
+  /* Rounded corners */
+}
+
+#about {
+  margin-top: 150px;
+  /* Adjust margin to make space below the header and timer */
+  padding: 20px;
+  background-color: #ffffff;
+  /* White background */
+  color: #333;
+  /* Dark text color */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+#dest {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  /* Make the container a flexbox */
+  align-items: center;
+  /* Align items vertically */
+}
+
+#map {
+  flex: 1;
+  /* Take up remaining space */
+  margin-right: 20px;
+  /* Add space between map and text */
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+#timer {
+  font-size: 1.2em;
+  display: flex;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  background-color: #ff6347;
+  /* Red timer background */
+  color: #ffffff;
+  /* White text color */
+  padding: 5px 10px;
+  margin-left: 10px;
+  /* Add space between timer containers */
+  border-radius: 5px;
+  /* Add border radius */
+}
+
+.timer-label {
+  margin-right: 5px;
+}
+
+.timer-digit {
+  font-weight: bold;
+}
+
+#about p {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+#about p:hover {
+  color: #1e90ff;
+  /* Change text color on hover */
+  cursor: pointer;
+}
+
+.traveler {
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9a825;
+  /* Yellow background */
+  border-radius: 10px;
+  /* Rounded corners */
+  display: inline-block;
+  vertical-align: top;
+  /* Align divs vertically */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Smooth transition */
+}
+
+.traveler h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.traveler p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.traveler:hover {
+  transform: translateY(-5px);
+  /* Move div up on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Add shadow effect */
+}
+
+.traveler img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#weather {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f9a825;
+  /* Yellow background */
+  border-radius: 10px;
+  /* Rounded corners */
+  text-align: center;
+}
+
+#weather h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+#weather p {
+  margin: 0;
+}
+
+#weather img {
+  width: 100px;
+  position: left;
+  height: auto;
+}
+
+#redirectButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#redirectButton:hover {
+  background-color: #45a049;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+      transform: scale(1.2);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+#redirectButton.pulse {
+  animation: pulse 2s infinite;
+}

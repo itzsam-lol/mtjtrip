@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathura Jayege BC</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="ctr1">
+        <h1>Mathura Jayege BC</h1>
+    </div>
+    <div id="ctr2">
+        <div id="timer"></div>
+    </div>
+    <div id="about">
+        <h2>About The Trip</h2>
+        <p>
+            This trip from Delhi to Mathura is planned to develop your personality and broaden your horizons. Embarking
+            on this journey is not just about visiting new places or experiencing different cultures; it's about delving
+            deep into the core of who you are and want to become. The step you take, the eating counter you have, search
+            as an opportunity for growth and self-discovery. As you immerse yourself in unfamiliar surroundings, you
+            will inevitably encounter challenges that push you beyond your comfort zone, allowing you to develop
+            resilience capability and a greater sense of self-awareness. Every interaction with locals or fellow
+            travellers offers valuable insights and perspectives that enrich your understanding of the world and your
+            place. This journey is about seeing the world and becoming the best version of yourself.
+        </p>
+    </div>
+    <hr style="width:50%">
+    <h2 align="center">Travellers</h2>
+    <hr style="width:50%">
+    <div class="traveler">
+        <h3>Aryan Raj</h3>
+        <img src="aryan.jpg" alt="Aryan Raj">
+        <p>No comments</p>
+    </div>
+    <div class="traveler">
+        <h3>Akshay Chauhan</h3>
+        <img src="akshay.jpg" alt="Akshay Chauhan">
+        <p>Itna khush kabhi college mai nhi dekha isse</p>
+    </div>
+    <div class="traveler">
+        <h3>Pratham Prakash</h3>
+        <img src="pratham.jpg" alt="Pratham Prakash">
+        <p>(mujhe mil gyi iski photo)</p>
+        <p>Full time Gamer; Part time Non Vegetarian</p>
+    </div>
+    <div class="traveler">
+        <h3>Satyam</h3>
+        <img src="admin.jpg" alt="Satyam">
+        <p>Trip planner</p>
+        <p>kuch chutiye hindi mai broker bhi bolte</p>
+    </div>
+    <div class="traveler">
+        <h3>Sheel Gautam</h3>
+        <img src="sheel.jpg" alt="Sheel Gautam">
+        <p><b>Alpha male</b> only earning member of group</p>
+        <p>Respect <b>++</b></p>
+    </div>
+    <div class="traveler">
+        <h3>Sushant Gola</h3>
+        <img src="sushant.jpg" alt="Sushant Gola">
+        <p><s>Electrical Engineer</s> Guitarist</p>
+    </div>
+    <div class="traveler">
+        <h3>Vikas Meena</h3>
+        <img src="meena.jpg" alt="Vikas Meena">
+        <p>He is under water</p>
+    </div>
+    <div class="traveler">
+        <h3>Yuvraj "Hulk" Verma</h3>
+        <img src="motabhai.jpg" alt="Yuvraj 'Hulk' Verma">
+        <p>Korean nhi mil rhi</p>
+    </div>
+    <hr>
+    <div id="dest">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28294.24850828849!2d77.68838167294491!3d27.56930444240845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736fcb5e9a2309%3A0x9868374c5faaf3ce!2sVrindavan%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1709643736839!5m2!1sen!2sin"
+            id="map" width="500" height="500" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+            <h1 align="center"><b>Destination</b></h1>
+            <h2><b>Mathura</b></h2>
+            <p>Mathura is a sacred city in Uttar Pradesh, northern India. The deity Lord Krishna is said to have been
+                born on the
+                site of Sri Krishna Janma Bhoomi, a Hindu temple. Dotting the Yamuna River are 25 ghats (flights of
+                steps down to
+                the water), of which Vishram Ghat is considered the holiest. Sati Burj is a 16th-century memorial tower.
+                Dwarkadhish
+                Temple has a carved entrance and a black-marble idol of Lord Krishna.</p>
+        </div>
+        <button id="redirectButton" onclick="redirectToLink()">Tickets</button>
+    </div>
+    <div id="weather">
+        <h2>Current Weather in Mathura</h2>
+        <div id="weather-info"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Timer
+            const tripDate = new Date('2024-03-06');
+            const timerContainer = document.getElementById('timer');
+
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = tripDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                timerContainer.innerHTML = `
+          <div class="timer-container">
+            <div class="timer-label">Days:</div>
+            <div class="timer-digit">${days}</div>
+          </div>
+          <div class="timer-container">
+            <div class="timer-label">Hours:</div>
+            <div class="timer-digit">${hours}</div>
+          </div>
+          <div class="timer-container">
+            <div class="timer-label">Minutes:</div>
+            <div class="timer-digit">${minutes}</div>
+          </div>
+          <div class="timer-container">
+            <div class="timer-label">Seconds:</div>
+            <div class="timer-digit">${seconds}</div>
+          </div>
+        `;
+
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    timerContainer.textContent = "EXPIRED";
+                }
+            }
+
+            const timerInterval = setInterval(updateTimer, 1000);
+
+        });
+        // Weather
+        const weatherInfo = document.getElementById('weather-info');
+
+        fetch('http://api.weatherapi.com/v1/current.json?key=1aeb600b95aa46fc8bb214943210303&q=Mathura')
+            .then(response => response.json())
+            .then(data => {
+                const cityName = data.location.name;
+                const country = data.location.country;
+                const temperature = data.current.temp_c;
+                const weatherDescription = data.current.condition.text;
+                const humidity = data.current.humidity;
+                const windSpeed = data.current.wind_kph;
+
+                weatherInfo.innerHTML = `
+        <p>City: ${cityName}, ${country}</p>
+        <p>Temperature: ${temperature}°C</p>
+        <p>Weather: ${weatherDescription}</p>
+        <p>Humidity: ${humidity}%</p>
+        <p>Wind Speed: ${windSpeed} km/h</p>
+      `;
+            })
+            .catch(error => {
+                console.log('Error fetching weather data:', error);
+                weatherInfo.textContent = 'Failed to fetch weather data';
+            });
+        function redirectToLink() {
+            // Change the URL to the link you want to redirect to
+            window.location.href = "https://drive.google.com/drive/folders/18rVmqWM8gq895il0P65tmfxRU6aKfEb2?usp=sharing";
+        }
+
+        // Add the pulse animation class to the button
+        document.getElementById("redirectButton").classList.add("pulse");
+
+    </script>
+</body>
+
+</html>
