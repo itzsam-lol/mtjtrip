@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e90ff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+.section1 {
+    margin: 0;
+    padding: 50px;
+    background-color: #ccc;
+}
+section {
+    margin-bottom: 30px;
+}
+
+h1{
+    text-align: left;
+    display: flex;
+}
+h2 {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #1e90ff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.gallery {
+    display: flex;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 400px; 
+    height: auto;
+    margin-right: 10px; 
+    animation: rotateGallery calc(12 * 5s) linear infinite;
+}
+
+@keyframes rotateGallery {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(calc(-200px * 12)); 
+    }
+}
+.info-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-link {
+    text-decoration: none;
+}
+
+.github-link img {
+    width: 30px; 
+    height: 30px; 
+}
+.gallery-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.view-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view-more-btn:hover {
+    background-color: #007bff;
+}
+.comment-section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.comment-form {
+    margin-bottom: 20px;
+}
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.comment-form button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.comment-info {
+    font-size: 12px;
+    color: #888;
+}
+
+#lol {
+    background-color: #ccc;
+}
+.section2 {
+    margin: 20px;
+}
+
+.place {
+    margin-bottom: 20px;
+}
+
+#h11 {
+    font-size: 24px;
+    color: #333;
+}
+
+#h21 {
+    font-size: 28px;
+    color: #555;
+}
+
+#h31 {
+    font-size: 18px;
+    color: #777;
+}
+
+#p1 {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+strong {
+    font-weight: bold;
+}
+.back-to-index {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.back-to-index:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-index:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.back-to-index .icon {
+    margin-right: 5px;
+    animation: pulse 2s infinite;
+}
+
+.comment-box {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+
+  .comment-box p {
+    margin: 0;
+    font-weight: bold;
+    color: whitesmoke;
+  }
